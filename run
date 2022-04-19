@@ -55,7 +55,7 @@ def back():
 # BANNER
 def banner():
 	clear()
-	wel = '# WELLCOME TO TOOLS CRACK ZANCOK V3'
+	wel = '# WELLCOME TO RATU ERROR'
 	wel2 = mark(wel, style='yellow')
 	sol().print(wel2, style='red')
 	au='_________________  _________  ____  __. |\n\____    /\      \ \_   ___ \|    |/ _| |[•]Au : Yoshi\n  /     / /   |   \/    \  \/|      <   |[•]Wa : 6283125837776\n /     /_/    |    \     \___|    |  \  |[•]Fb : Mark.Zuckerberg.XV\n/_______ \____|__  /\______  /____|__ \ |[•]Gh : XhurayraEAAG\n        \/       \/        \/        \/ |'
