@@ -57,7 +57,6 @@ def banner():
 	clear()
 	print('')
 	wel = '# WELLCOME TO RATU ERROR'
-	print('')
 	wel2 = mark(wel, style='yellow')
 	sol().print(wel2, style='red')
 	au='_________________  _________  ____  __. |\n\____    /\      \ \_   ___ \|    |/ _| |[•]Au : Yoshi\n  /     / /   |   \/    \  \/|      <   |[•]Wa : 6283125837776\n /     /_/    |    \     \___|    |  \  |[•]Fb : Mark.Zuckerberg.XV\n/_______ \____|__  /\______  /____|__ \ |[•]Gh : XhurayraEAAG\n        \/       \/        \/        \/ |'
