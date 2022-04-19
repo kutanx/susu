@@ -55,7 +55,7 @@ def back():
 # BANNER
 def banner():
 	clear()
-	PRINT('')
+	print('')
 	wel = '# WELLCOME TO RATU ERROR'
 	wel2 = mark(wel, style='yellow')
 	sol().print(wel2, style='red')
