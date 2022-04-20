@@ -59,7 +59,8 @@ def jalan(z):
 		sys.stdout.flush()
 		time.sleep(0.001)
 # BANNER
-def banner():                
+def banner():
+	os.system('clear')
 	print
 	print
 	print
