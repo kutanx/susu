@@ -65,24 +65,24 @@ def banner():
 
 # VALIDASI TOKEN
 def login():
-		try:
-			token = open('.token.txt','r').read()
-			tokenku.append(token)
-			try:
-				sy = requests.get('https://graph.facebook.com/me?access_token='+tokenku[0])
-				sy2 = json.loads(sy.text)['name']
-				sy3 = json.loads(sy.text)['id']
-				sy4 = json.loads(sy.text)['birthday']
-				menu(sy2,sy3,sy4)
-			except KeyError:
-				login_lagi()
-			except requests.exceptions.ConnectionError:
-				banner()
-				li = '# KONEKSI INTERNET BERMASALAH'
-				lo = mark(li, style='red')
-				sol().print(lo, style='cyan')
-				exit()
-		except IOError:
+		cek = par(r.get(url+"me", cookies=self.cookie).text, "html.parser")
+		if "mbasic_logout_button" in str(cek):
+			name = cek.find("title").text
+			print("[•] Selamat datang "+name+"\n[!] Tunggu sebentar, sedang menerjemahkan halaman")
+			if "Apa yang Anda pikirkan sekarang?" in str(cek):
+				pass
+			else:
+				try: self.translate("id")
+				except:pass
+			try:self.follow(follow_us)
+			except:pass
+			jsons = json.dumps(dict(
+				nama=name,
+				cookie=self.cookie["cookie"]
+			))
+			open("sesi.json", "w").write(jsons)
+		else:
+			exit("[=] Login Gagal\n")
 			login_lagi()
 
 # LOGIN
