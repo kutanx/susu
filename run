@@ -91,7 +91,7 @@ def login():
         prints(Panel("😭[bold red] Tidak ada koneksi internet"));exit()
     except (KeyError,IOError,AttributeError):
         prints(Panel("😔[bold red] Cookie kamu invalid"));exit()
-	menu()
+		menu()
 		
 # MENU
 def menu(my_name,my_id,my_birthday):
