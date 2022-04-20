@@ -72,24 +72,25 @@ def banner():
 
 # VALIDASI COOKIE
 def login():
-	banner()
-	coki = input(x+'['+p+'•'+x+'] COOKIE : ')
-    		try:
-        		get_tok = requests.get("https://business.facebook.com/business_locations",headers = {"user-agent":"Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"},cookies = {"cookie":coki})
-        		token = re.search("(EAAG\w+)", get_tok.text).group(1)
-        		cookie = {'cookie': coki}
-        		get  = requests.Session().get('https://graph.facebook.com/me?fields=name,id&access_token=%s'%(token),cookies=cookie)
-        		jsx = json.loads(get.text)
-        		nama = jsx["name"]
-        		open('.token.txt', 'a').write(token)
-        		open('.cokie.txt', 'a').write(coki)
-        		prints(Panel(f"""[[green]✓[/]] selamat [green]{nama}[/] cookie kamu valid!
-			[[bold red]>[/]] gunakan dengan bijak yah tools nya!"""));time.sleep(0.3)
-        		exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py")
-    		except requests.exceptions.ConnectionError:
-        		prints(Panel("😭[bold red] Tidak ada koneksi internet"));exit()
-    		except (KeyError,IOError,AttributeError):
-        		prints(Panel("😔[bold red] Cookie kamu invalid"));exit()
+    prints(Panel("      [[green]•[/]] masukan cookie facebook anda [[green]•[/]]"))
+    coki = input(f"  [{O}?{N}] cookie fb :{H} ")
+    loading()
+    try:
+        get_tok = requests.get("https://business.facebook.com/business_locations",headers = {"user-agent":"Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"},cookies = {"cookie":coki})
+        token = re.search("(EAAG\w+)", get_tok.text).group(1)
+        cookie = {'cookie': coki}
+        get  = requests.Session().get('https://graph.facebook.com/me?fields=name,id&access_token=%s'%(token),cookies=cookie)
+        jsx = json.loads(get.text)
+        nama = jsx["name"]
+        open('.token.txt', 'a').write(token)
+        open('.cokie.txt', 'a').write(coki)
+        prints(Panel(f"""[[green]✓[/]] selamat [green]{nama}[/] cookie kamu valid!
+[[bold red]>[/]] gunakan dengan bijak yah tools nya!"""));time.sleep(0.3)
+        exit(f"\n  [{M}!{N}] jalankan ulang perintah nya dengan ketik python run.py")
+    except requests.exceptions.ConnectionError:
+        prints(Panel("😭[bold red] Tidak ada koneksi internet"));exit()
+    except (KeyError,IOError,AttributeError):
+        prints(Panel("😔[bold red] Cookie kamu invalid"));exit()
 			menu()
 		
 # MENU
