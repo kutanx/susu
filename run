@@ -70,7 +70,7 @@ def banner():
 	print (' \033[1;96m  ____________________________________________')
 	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 
-# VALIDASI TOKEN
+# VALIDASI COOKIE
 def login():
 	banner()
 	coki = input(x+'['+p+'•'+x+'] COOKIE : ')
@@ -91,8 +91,6 @@ def login():
     		except (KeyError,IOError,AttributeError):
         		prints(Panel("😔[bold red] Cookie kamu invalid"));exit()
 			menu()
-
-
 		
 # MENU
 def menu(my_name,my_id,my_birthday):
