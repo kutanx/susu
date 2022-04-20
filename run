@@ -72,7 +72,7 @@ def banner():
 
 # VALIDASI COOKIE
 def login():
-    print(Panel("      [[green]•[/]] masukan cookie facebook anda [[green]•[/]]"))
+    print(" masukan cookie facebook anda"))
     coki = input(f"  [{O}?{N}] cookie fb :{H} ")
     loading()
     try:
