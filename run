@@ -96,8 +96,7 @@ def login():
 def login_lagi():
 	banner()
 	print('')
-	print('MASUKAN TOKEN')
-	panda = input(x+'['+p+'•'+x+'] Token : ')
+	panda = input(x+'['+p+'•'+x+'] COOKIES : ')
 	akun=open('.token.txt','w').write(panda)
 	try:
 		tes = requests.get('https://graph.facebook.com/me?access_token='+panda)
