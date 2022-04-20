@@ -52,6 +52,12 @@ def clear():
 # BACK
 def back():
 	login()
+	
+def jalan(z):
+	for e in z + '\n':
+		sys.stdout.write(e)
+		sys.stdout.flush()
+		time.sleep(0.001)
 # BANNER
 def banner():                
 	print
