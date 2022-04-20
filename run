@@ -54,14 +54,15 @@ def back():
 	login()
 # BANNER
 def banner():
-	clear()
-	print('')
-	wel = '# WELLCOME TO RATU ERROR'
-	wel2 = mark(wel, style='white')
-	sol().print(wel2, style='red')
-	au='[•] Au : RATU ERROR\n[•] Wa : 6287799183568\n[•] Fb : abid.malik.73113528\n[•] Gh : https://www.xxx.com'
-	pengembang1=nel(au,style="green")
-	cetak(nel(pengembang1, title='INFORMASI AUTHOR'))
+	def banner():                
+	print
+	print
+	print
+	jalan ('                \33[3;1m\033[1;97mW e l c o m e  T o\33[0;1m')
+	print
+	jalan ('       \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mA\033[1;96m] \033[1;96m[\033[1;97mT\033[1;96m] \033[1;96m[\033[1;97mU\033[1;96m]  \033[1;96m[\033[1;97mE\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m] \033[1;96m[\33[37;1mR\033[1;96m] \033[1;96m[\033[1;97mO\033[1;96m] \033[1;96m[\033[1;97mR\033[1;96m]\033[1;96m')
+	print (' \033[1;96m  ____________________________________________')
+	print ('\033[1;97m\033[1;96m ¤\033[1;97m{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}{}\033[1;96m¤')
 
 # VALIDASI TOKEN
 def login():
