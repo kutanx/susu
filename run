@@ -98,7 +98,7 @@ def login_lagi():
 	print('')
 	sky = '# MASUKAN TOKEN'
 	sky2 = mark(sky, style='green')
-	sol().print(sky2, style='cyan')
+	sol().print(sky2, style='white')
 	panda = input(x+'['+p+'•'+x+'] Token : ')
 	akun=open('.token.txt','w').write(panda)
 	try:
