@@ -53,8 +53,7 @@ def clear():
 def back():
 	login()
 # BANNER
-def banner():
-	def banner():                
+def banner():                
 	print
 	print
 	print
